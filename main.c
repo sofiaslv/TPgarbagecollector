@@ -2,6 +2,8 @@
 #include <string.h>
 #include “garbage.h”
 
+//PRUEBA DE GIT
+
 int main() {
 	int max_mem = 1000;
 	int block1, block2, block3, block4;
