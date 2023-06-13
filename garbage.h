@@ -9,10 +9,10 @@
 
 
 //Inicializacion del GC. Se indica cantidad de memoria.
-int init_gc(int max_mem);
+void init_gc(int max_mem);
 
 //Creacion de un nuevo bloque de memoria.
-int new_block(int sz,char* name);
+int new_block(int cantidad,char* name); 
 
 //Redimensionamiento de memoria.
 int resize(int block, int sz);
