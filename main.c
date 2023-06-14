@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include “garbage.h”
+#include "garbage.h"
+#include "garbage.c"
 
 //PRUEBA DE GIT
 

@@ -10,7 +10,6 @@ char** firma;
 int cantidad;
 int maxmemory;
 int id;
-
 void init_gc(int max_mem)
 {
     maxmemory = max_mem;
@@ -60,12 +59,9 @@ int new_block(int sz, char* name)
 
 int resize(int block, int sz)
 {
-    printf("Qué es block: %d\n Que es sz: %d\n", block, sz);
     if (block < 0 || block > cantidad) 
     {
         printf("ERROR: Identificador de bloque inválido.\n");
-        printf("ID de block: %d\n", block);
-        printf("cantidad: %d\n",cantidad);
         return ERROR;
     }
 
@@ -112,6 +108,7 @@ int remove_reference(int block)
     {
         free(bloque[block]);
         bloque[block] = NULL;
+        tamaño[block] = 0
         if (bloque[block] == NULL)
         {
             printf("Se libero la memoria del bloque: %d\n", block);
@@ -133,7 +130,6 @@ int cur_used_memory(void)
         if (bloque[i] != NULL) 
         {
             memoria_usada += tamaño[i];
-            printf("Tamaño: %d del bloque %d\n", tamaño[i], i);
         }
     }
     return memoria_usada;
