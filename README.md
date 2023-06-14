@@ -4,7 +4,7 @@
 
 **Implementación**
 
-```c
+
 1. // Definimos variables globales con las cuales vamos a trabajar a través de todo el archivo `garbage.c`.
 
 2. // La función `void init_gc(int max_mem)` inicializa los vectores en NULL y las variables en 0. Además, se le asigna la memoria máxima a la variable local.
